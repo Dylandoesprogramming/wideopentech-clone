@@ -25,9 +25,13 @@ nav{
   font-size: 1.3em;
   font-weight: 500;
   font-family: "Lato", sans-serif;
+  z-index: 1000;
 }
 
-@media (max-width: 699px) {
+@media screen and (max-width: 799px) {
+  *{
+    /* overflow-x: hidden; */
+  }
   nav{
     background-color: white;
   }
@@ -39,27 +43,76 @@ nav{
     display: none;
   }
 
+  /* START OF HAMBURGER CSS */
+
+  .nav {
+    position: absolute;
+    right:10%;
+    padding: 0px;
+    color:black;
+    background-color: white;
+}
+
+  .nav ul {
+      list-style: none;
+  }
+
+  .nav ul li {
+      padding: 0px 10px 0px 10px;
+  }
+
+  #menu {
+      display: none;
+  }
+
+  #menu-toggle {
+      cursor: pointer;
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+  }
+
+  label[for="menu-toggle"]:before {
+      content: "\2630";
+      padding: 0px 10px 0px 0px;
+  }
+
+  #menu-toggle:checked + #menu {
+      display: block;
+  }
+
+  /* END OF HAMBURGER CSS */
+
   .logo-sm{
     position:absolute;
+    z-index: 1000;
     margin:0;
     top:4%;
     left:2%;
-    width:155px;
-    height:31px;
+    width:51px;
+    height:51px;
   }
 
 }
 
-@media(min-width: 700px){
+@media screen and (min-width: 800px){
+  .logo-sm{
+    display: none;
+  }
+
+  #menu{
+    display: none;
+  }
+
+  #menu-toggle{
+    display: none;
+  }
+
   .logo-lg{
     position:absolute;
     top:4%;
     left:10%;
     width:151px;
     height:31px;
-  }
-  .logo-sm{
-    display: none;
   }
 
   .top-bar{
