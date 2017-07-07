@@ -46,6 +46,7 @@ a:hover{
 @media screen and (max-width: 799px) {
   nav{
     background-color: white;
+    height: 10vh;
   }
   .top-bar{
     display: none;
@@ -55,10 +56,14 @@ a:hover{
     display: none;
   }
 
+  a{
+    color:black;
+  }
+
   /* START OF HAMBURGER CSS */
 
   .nav {
-    position: absolute;
+    position: fixed;
     right:10%;
     padding: 0px;
     color:black;
@@ -67,10 +72,6 @@ a:hover{
 
   .nav ul {
       list-style: none;
-  }
-
-  .nav ul li {
-      padding: 0px 10px 0px 10px;
   }
 
   #menu {
