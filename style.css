@@ -1,18 +1,23 @@
 *{
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html, body{
   height:100%;
   margin:0;
+  padding: 0;
   background-color: #F0F0F0;
 }
 header{
+  position: relative;
   margin:0;
   height:50%;
   width:100%;
   background-image: url(wot-head.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
 nav{
@@ -28,10 +33,17 @@ nav{
   z-index: 1000;
 }
 
+a{
+  color:white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+a:hover{
+    border-bottom: 2px solid blue;
+}
+
 @media screen and (max-width: 799px) {
-  *{
-    /* overflow-x: hidden; */
-  }
   nav{
     background-color: white;
   }
@@ -120,31 +132,16 @@ nav{
     top:3%;
     right:15%;
   }
-
-  a{
-    color:white;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-
-  a:hover{
-    border-bottom: 5px solid #BDD235;
-  }
-
 }
-
-
-
-
-
 
 .center-piece{
   position: absolute;
   display: block;
-  top:12%;
-  left:30%;
+  top:10vh;
+  left:35vw;
+  width:100%;
   color:#fff;
-  font-family: font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 500;
 }
 .top-piece{
@@ -154,12 +151,12 @@ nav{
 
 .core{
   margin:0;
-  font-size:8em;
+  font-size:7em;
 }
 
 .sub{
+  margin-left: 3vw;
   font-size: 1.5em;
-  text-align: center;
 }
 
 .orange{
@@ -179,9 +176,13 @@ button{
   border: none;
   width:368px;
   height:48px;
-  margin:0 auto;
+  margin-left: 3vw;
   background-color: #BDD235;
   border-radius: 24px;
+}
+
+button:hover{
+  background-color: #c3d838;
 }
 
 main{
@@ -206,4 +207,39 @@ main{
   font-family: "Oswald",sans-serif;
   font-size:3em;
   color:#6E7C80;
+}
+
+@media screen and (max-width: 500px) {
+  .center-piece{
+    position: absolute;
+    display: block;
+    top:11VH;
+    left:25VW;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .top-piece{
+    display: block;
+    left:0;
+    font-size: 2em;
+    padding-left: 10%;
+  }
+
+  .core{
+    display: block;
+    left: 0;
+    font-size: 3.5em;
+  }
+
+  .sub{
+    margin-right: 50%;
+    font-size: 1em;
+  }
+
+  button{
+    width:134px;
+    height:24px;
+    border-radius: 12px;
+    margin-right: 58%;
+  }
 }
